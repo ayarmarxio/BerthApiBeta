@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BerthApiBeta.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace BerthApiBeta.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-
+    [ApiController]  
     public class RecordsController : ControllerBase
     {
         private readonly BerthApiBetaContext _context;

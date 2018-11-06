@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BerthApiBeta.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace BerthApiBeta.Controllers
 {
@@ -21,7 +22,7 @@ namespace BerthApiBeta.Controllers
         }
 
         // GET: api/Users
-        [HttpGet]
+        [HttpGet]        
         public IEnumerable<User> GetUser()
         {
             return _context.User;
