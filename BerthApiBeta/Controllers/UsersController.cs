@@ -47,6 +47,28 @@ namespace BerthApiBeta.Controllers
             return Ok(user);
         }
 
+        // GET: api/Users/username/password
+        [HttpGet("login/{username}/{password}")]
+        public IActionResult Login([FromRoute] string username, string password)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var users = _context.User.ToList();
+
+            foreach (var item in users)
+            {
+                if (item.Username == username && item.Password == password)
+                {
+                    return Ok(item);
+                }
+            }
+
+            return NotFound();
+        }
+
         // PUT: api/Users/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)

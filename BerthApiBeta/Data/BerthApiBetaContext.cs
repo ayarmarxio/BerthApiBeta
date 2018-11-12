@@ -11,6 +11,7 @@ namespace BerthApiBeta.Models
         public BerthApiBetaContext (DbContextOptions<BerthApiBetaContext> options)
             : base(options)
         {
+
         }
 
         public DbSet<BerthApiBeta.Models.User> User { get; set; }

@@ -43,10 +43,10 @@ namespace BerthApiBeta
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors(builder => builder
-    .AllowAnyOrigin()
-    .AllowAnyMethod()
-    .AllowAnyHeader()
-    .AllowCredentials());
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials());
             app.UseMvc();
 
             
