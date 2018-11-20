@@ -13,6 +13,12 @@ namespace BerthApiBeta.Models
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Record>()
+                .Property(b => b.RecordTime)
+                .HasDefaultValueSql("getdate()");
+        }
 
         public DbSet<BerthApiBeta.Models.User> User { get; set; }
 

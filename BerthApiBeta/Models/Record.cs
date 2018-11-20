@@ -11,10 +11,13 @@ namespace BerthApiBeta.Models
     public class Record
     {
         [Key]
+
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RecordId { get; set; }
         
-        public Point Location { get; set; }      
+        public double Long { get; set; }
+        
+        public double Lat { get; set; }
 
         public DateTime RecordTime { get; set; }
 
