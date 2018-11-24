@@ -63,7 +63,7 @@ namespace BerthApiBeta.Controllers
                 if (item.Username == username && item.Password == password)
                 {
                     return Ok(item);
-                }
+                }                
             }
 
             return NotFound();
