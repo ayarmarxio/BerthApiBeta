@@ -14,7 +14,7 @@ namespace BerthApiBeta.DataTransferObjects
 
         public double BPSystolic { get; set; }
 
-        public double BPDiastolic { get; set; }          
+        public double BPDiastolic { get; set; }         
          
 
         public double BodyTemperature { get; set; }
